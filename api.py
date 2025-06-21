@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify, Response, stream_with_context
-
+import pandas as pd
+import joblib
 app = Flask(__name__)
 from flask_cors import CORS
 CORS(app)
+data = pd.read_csv("aboutDataset/人员数据集.csv")
 # 点赞
 @app.route('/word/like/create', methods=['POST'])
 def like_post():
@@ -49,11 +51,37 @@ def like_post():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    return jsonify({
-        "mesg":"hello predict"
-    })
+    """
+    形如{'岗位': '教学岗位', '能力标签': '教学设计, 团队协作, 数据分析, 领导力, 科研能力',
+                  '技能特长': '教学设计, 团队协作, 数据分析, 领导力, 科研能力', '培训记录': '课程B', '入职年份': 2021,
+                  '入职月份': 12}
+    to
+    :return:
+    """
+    # 直接使用预训练模型进行预测
+    try:
+        input_json = request.json
+        modelName = 'decission_tree'
+        label_encoders=joblib.load('aboutModel/saved_stander/'+modelName+'.pkl')
+        for key in input_json:
+            input_json[key] = label_encoders[key].transform([input_json[key]])
+        model = joblib.load('aboutModel/saved_model/'+modelName+'.pkl')
+        preds = "否"
+        data_input = {}
+        for i in input_json:
+            data_input[i] = input_json[i][0]
+        if int(model.predict([list(data_input.values())])):
+            preds = "是"
+        print(preds)
+        return jsonify({
+            "prediction":preds
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
     # app.run(debug=True,host='192.168.100.52',port=3000)
+    app.dt_model=None
+    
     app.run(debug=True, port=3000)

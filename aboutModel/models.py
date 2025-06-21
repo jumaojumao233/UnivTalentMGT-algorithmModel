@@ -2,7 +2,6 @@ from sklearn.model_selection import train_test_split
 import lightgbm as lgb
 import numpy as np
 import pandas as pd
-import decisionTree as xgb
 from catboost import CatBoostRegressor
 from sklearn.ensemble import GradientBoostingRegressor, ExtraTreesRegressor, BaggingRegressor
 from sklearn.inspection import permutation_importance
@@ -79,7 +78,7 @@ class Models:
         )
     def getDecisionTree(self):
         return DecisionTreeRegressor(random_state=0)
-def getResultOfDecisionTree(data):
+def getResultOfDecisionTree(data, plot=False):
     import pandas as pd
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import mean_squared_error,mean_absolute_error,r2_score
@@ -116,72 +115,73 @@ def getResultOfDecisionTree(data):
     print(f'XGBoost RMSE: {rmse}')
     print(f'XGBoost R2: {r2}')
 
-    # 获取特征重要性
-    feature_importances = model.feature_importances_
-    print(f'Feature importances: {feature_importances}')
+    if plot:
+        # 获取特征重要性
+        feature_importances = model.feature_importances_
+        print(f'Feature importances: {feature_importances}')
 
-    # 特征名称
-    featureNamesII=data.columns.values[:-1]
-    # 绘制柱状图
-    plt.barh(range(len(feature_importances)), feature_importances, color='skyblue')
-    plt.yticks(range(len(feature_importances)), featureNamesII)
-    plt.xlabel('Feature Importance')
-    plt.title('Feature Importances')
-    plt.gca().invert_yaxis()  # 反转 y 轴，使得最重要的特征在上方
-    plt.show()
+        # 特征名称
+        featureNamesII=data.columns.values[:-1]
+        # 绘制柱状图
+        plt.barh(range(len(feature_importances)), feature_importances, color='skyblue')
+        plt.yticks(range(len(feature_importances)), featureNamesII)
+        plt.xlabel('Feature Importance')
+        plt.title('Feature Importances')
+        plt.gca().invert_yaxis()  # 反转 y 轴，使得最重要的特征在上方
+        plt.show()
 
-    ##
-    # 按值从大到小排序
-    dffeimp=pd.DataFrame({
-        'featureNames':featureNamesII,
-        'feature_importances':feature_importances
-    })
-    df = dffeimp.sort_values(by='feature_importances', ascending=False)
+        ##
+        # 按值从大到小排序
+        dffeimp=pd.DataFrame({
+            'featureNames':featureNamesII,
+            'feature_importances':feature_importances
+        })
+        df = dffeimp.sort_values(by='feature_importances', ascending=False)
 
-    # 绘制柱状图
-    plt.figure(figsize=(10, 6))
-    plt.barh(df['featureNames'], df['feature_importances'], color='skyblue')
-    plt.xlabel('featureNames')
-    plt.ylabel('feature_importances')
-    plt.title('feature importances plot')
-    plt.gca().invert_yaxis()
-    plt.show()
+        # 绘制柱状图
+        plt.figure(figsize=(10, 6))
+        plt.barh(df['featureNames'], df['feature_importances'], color='skyblue')
+        plt.xlabel('featureNames')
+        plt.ylabel('feature_importances')
+        plt.title('feature importances plot')
+        plt.gca().invert_yaxis()
+        plt.show()
 
-    ##
-    # SHAP 值
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(X_train)
-    shap.summary_plot(shap_values, X_train, plot_type="bar")
+        ##
+        # SHAP 值
+        explainer = shap.TreeExplainer(model)
+        shap_values = explainer.shap_values(X_train)
+        shap.summary_plot(shap_values, X_train, plot_type="bar")
 
-    # 排列图permutation plot
-    result = permutation_importance(model, X_test, y_test, n_repeats=10, random_state=42)
-    sorted_idx = result.importances_mean.argsort()
-    plt.barh(X_test.columns[sorted_idx], result.importances_mean[sorted_idx], color='b')
-    plt.xlabel("Permutation Importance")
-    plt.show()
+        # 排列图permutation plot
+        result = permutation_importance(model, X_test, y_test, n_repeats=10, random_state=42)
+        sorted_idx = result.importances_mean.argsort()
+        plt.barh(X_test.columns[sorted_idx], result.importances_mean[sorted_idx], color='b')
+        plt.xlabel("Permutation Importance")
+        plt.show()
 
 
-    # 部分依赖图
-    from matplotlib import pyplot as plt
-    from sklearn.inspection import PartialDependenceDisplay
+        # 部分依赖图
+        from matplotlib import pyplot as plt
+        from sklearn.inspection import PartialDependenceDisplay
 
-    featureNames=data.columns.values[:-1]
+        featureNames=data.columns.values[:-1]
 
-    # Create and plot the data
-    disp1 = PartialDependenceDisplay.from_estimator(model, X_train, featureNames)
-    plt.subplots_adjust(wspace=0.4, hspace=1)
-    plt.show()
+        # Create and plot the data
+        disp1 = PartialDependenceDisplay.from_estimator(model, X_train, featureNames)
+        plt.subplots_adjust(wspace=0.4, hspace=1)
+        plt.show()
 
-    #预测值真实值比对图
-    plt.scatter(y_test,preds)
-    # 绘制参考线
-    min_val = min(min(preds), min(y_test))
-    max_val = max(max(preds), max(y_test))
-    plt.plot([min_val, max_val], [min_val, max_val], 'k--')  # 黑色虚线
-    # plt.xlabel("Feature Values")
-    plt.xlabel("actual values")
-    plt.ylabel("predations values")
-    plt.show()
+        #预测值真实值比对图
+        plt.scatter(y_test,preds)
+        # 绘制参考线
+        min_val = min(min(preds), min(y_test))
+        max_val = max(max(preds), max(y_test))
+        plt.plot([min_val, max_val], [min_val, max_val], 'k--')  # 黑色虚线
+        # plt.xlabel("Feature Values")
+        plt.xlabel("actual values")
+        plt.ylabel("predations values")
+        plt.show()
 
     predDataFrame=X_test
     predDataFrame.insert(loc=X_test.shape[1], column=data.columns.values[-1], value=preds)
@@ -190,7 +190,8 @@ def getResultOfDecisionTree(data):
     modelResult['mse']=mse
     modelResult['rmse']=rmse
     modelResult['r2']=r2
-    modelResult['feature_importances']=feature_importances
+    # modelResult['feature_importances']=feature_importances
     # modelResult['shap_values']=shap_values
-    modelResult['permutation_importance']=result
+    # modelResult['permutation_importance']=result
+    modelResult['model']=model
     return modelResult
