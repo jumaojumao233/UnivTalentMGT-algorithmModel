@@ -1,0 +1,25 @@
+curl -X POST http://127.0.0.1:5005/api/team/monitor -H "Content-Type: application/json" -d '{
+  "teamId": "T003",
+  "currentStaff": [
+    {
+      "staffId": "S001",
+      "position": "Team Leader"
+    },
+    {
+      "staffId": "S002",
+      "position": "Researcher"
+    }
+  ],
+  "recentChanges": [
+    {
+      "staffId": "S003",
+      "changeType": "New Hire",
+      "position": "Data Analyst"
+    },
+    {
+      "staffId": "S004",
+      "changeType": "Resignation",
+      "position": "Project Manager"
+    }
+  ]
+}'

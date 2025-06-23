@@ -1,0 +1,20 @@
+curl -X POST http://127.0.0.1:5003/api/team/recommend -H "Content-Type: application/json" -d '{
+  "teamRequirements": {
+    "positions": [
+      {
+        "name": "Team Leader",
+        "skills": ["Leadership", "Project Management"],
+        "experience": 5
+      },
+      {
+        "name": "Researcher",
+        "skills": ["Data Analysis", "Machine Learning"],
+        "educationLevel": "PhD"
+      }
+    ],
+    "otherConditions": {
+      "ageRange": [30, 50],
+      "genderBalance": true
+    }
+  }
+}'

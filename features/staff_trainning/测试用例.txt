@@ -1,0 +1,13 @@
+curl -X POST http://127.0.0.1:5004/api/training/recommend -H "Content-Type: application/json" -d '{
+  "staffId": "S001",
+  "capabilities": {
+    "teaching": 4.5,
+    "research": 4.8,
+    "management": 3.9,
+    "innovation": 4.2
+  },
+  "positionRequirements": {
+    "requiredSkills": ["Data Analysis", "Machine Learning"],
+    "minimumExperience": 3
+  }
+}'
