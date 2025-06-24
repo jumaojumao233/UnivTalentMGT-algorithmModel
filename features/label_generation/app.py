@@ -3,7 +3,8 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-
+from flask_cors import CORS
+CORS(app)
 # 加载模型
 capability_model = joblib.load('capability_model.pkl')
 potential_model = joblib.load('potential_model.pkl')

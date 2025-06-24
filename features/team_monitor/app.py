@@ -2,7 +2,8 @@ from flask import Flask, request, jsonify
 import joblib
 from train_models import *
 app = Flask(__name__)
-
+from flask_cors import CORS
+CORS(app)
 # 加载模型
 monitor_team = joblib.load('monitor_team_o1.pkl')
 

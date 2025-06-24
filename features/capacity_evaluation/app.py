@@ -3,7 +3,8 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-
+from flask_cors import CORS
+CORS(app)
 # 加载模型
 models = {}
 for target in ['teaching', 'research', 'management', 'innovation']:
