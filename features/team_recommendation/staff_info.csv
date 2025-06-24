@@ -1,0 +1,101 @@
+staffId,name,age,gender,position,skills,experience,educationLevel
+S001,姓名001,53,Female,Team Leader,"['Problem Solving', 'Leadership', 'Leadership']",17,Master
+S002,姓名002,39,Male,Team Leader,"['Data Analysis', 'Innovation', 'Innovation']",8,Master
+S003,姓名003,32,Male,Team Leader,"['Machine Learning', 'Innovation', 'Communication']",10,Master
+S004,姓名004,45,Female,Manager,"['Leadership', 'Innovation', 'Machine Learning', 'Data Analysis']",2,Bachelor
+S005,姓名005,43,Male,Team Leader,['Innovation'],19,PhD
+S006,姓名006,47,Male,Developer,"['Communication', 'Innovation', 'Machine Learning', 'Communication']",9,Bachelor
+S007,姓名007,35,Male,Team Leader,"['Innovation', 'Communication', 'Leadership']",7,PhD
+S008,姓名008,35,Male,Researcher,"['Leadership', 'Programming', 'Project Management']",4,Bachelor
+S009,姓名009,48,Male,Researcher,"['Communication', 'Project Management', 'Project Management', 'Communication']",18,PhD
+S010,姓名010,48,Female,Manager,"['Innovation', 'Programming', 'Leadership']",13,Bachelor
+S011,姓名011,27,Female,Researcher,"['Leadership', 'Machine Learning', 'Leadership', 'Communication']",11,Master
+S012,姓名012,46,Female,Developer,['Innovation'],4,Bachelor
+S013,姓名013,26,Male,Team Leader,"['Innovation', 'Innovation', 'Innovation', 'Problem Solving']",4,PhD
+S014,姓名014,48,Male,Manager,"['Leadership', 'Innovation', 'Leadership']",10,Bachelor
+S015,姓名015,54,Male,Team Leader,"['Machine Learning', 'Data Analysis', 'Data Analysis', 'Communication']",5,Bachelor
+S016,姓名016,26,Female,Team Leader,"['Communication', 'Communication', 'Communication']",9,Bachelor
+S017,姓名017,45,Male,Developer,"['Communication', 'Programming']",3,Master
+S018,姓名018,57,Male,Researcher,"['Communication', 'Innovation', 'Data Analysis']",17,Bachelor
+S019,姓名019,36,Female,Researcher,"['Project Management', 'Programming', 'Communication']",3,Master
+S020,姓名020,46,Male,Team Leader,['Machine Learning'],16,Master
+S021,姓名021,49,Female,Manager,"['Innovation', 'Leadership', 'Programming']",4,Bachelor
+S022,姓名022,51,Female,Researcher,"['Programming', 'Innovation', 'Data Analysis', 'Machine Learning']",18,Bachelor
+S023,姓名023,52,Female,Manager,"['Innovation', 'Leadership', 'Innovation']",17,Bachelor
+S024,姓名024,40,Male,Researcher,['Machine Learning'],7,PhD
+S025,姓名025,39,Male,Manager,"['Communication', 'Programming', 'Communication', 'Programming']",5,Bachelor
+S026,姓名026,27,Male,Developer,"['Data Analysis', 'Machine Learning']",12,Master
+S027,姓名027,31,Male,Manager,['Programming'],17,Bachelor
+S028,姓名028,45,Male,Developer,"['Programming', 'Leadership', 'Communication', 'Programming']",13,PhD
+S029,姓名029,33,Male,Developer,"['Data Analysis', 'Machine Learning', 'Leadership']",3,Bachelor
+S030,姓名030,42,Male,Manager,"['Problem Solving', 'Programming', 'Programming', 'Innovation']",9,PhD
+S031,姓名031,28,Female,Developer,"['Leadership', 'Innovation', 'Data Analysis']",17,PhD
+S032,姓名032,49,Male,Team Leader,"['Project Management', 'Leadership', 'Project Management', 'Problem Solving']",17,Bachelor
+S033,姓名033,38,Female,Developer,"['Project Management', 'Data Analysis']",16,Master
+S034,姓名034,33,Male,Researcher,"['Communication', 'Innovation', 'Project Management', 'Innovation']",13,PhD
+S035,姓名035,50,Male,Manager,"['Communication', 'Problem Solving', 'Project Management']",19,Bachelor
+S036,姓名036,26,Male,Team Leader,"['Data Analysis', 'Project Management', 'Project Management']",17,Bachelor
+S037,姓名037,44,Female,Manager,"['Leadership', 'Innovation']",4,Master
+S038,姓名038,52,Female,Researcher,['Leadership'],12,PhD
+S039,姓名039,31,Female,Researcher,"['Communication', 'Innovation', 'Problem Solving']",9,PhD
+S040,姓名040,32,Female,Researcher,['Project Management'],19,Bachelor
+S041,姓名041,59,Male,Developer,"['Project Management', 'Data Analysis', 'Project Management']",12,Bachelor
+S042,姓名042,38,Female,Developer,['Innovation'],9,Master
+S043,姓名043,41,Male,Manager,['Machine Learning'],7,Master
+S044,姓名044,28,Male,Manager,"['Problem Solving', 'Leadership']",14,PhD
+S045,姓名045,26,Female,Team Leader,"['Programming', 'Machine Learning', 'Leadership', 'Innovation']",19,PhD
+S046,姓名046,30,Female,Team Leader,"['Communication', 'Innovation', 'Communication', 'Machine Learning']",15,Bachelor
+S047,姓名047,28,Female,Manager,"['Problem Solving', 'Problem Solving', 'Machine Learning']",16,PhD
+S048,姓名048,53,Female,Developer,"['Project Management', 'Innovation']",5,Master
+S049,姓名049,42,Female,Researcher,"['Problem Solving', 'Communication', 'Data Analysis']",3,Master
+S050,姓名050,50,Female,Manager,['Project Management'],12,Bachelor
+S051,姓名051,58,Female,Team Leader,"['Communication', 'Programming', 'Communication']",4,Master
+S052,姓名052,34,Female,Developer,"['Project Management', 'Communication']",16,Master
+S053,姓名053,38,Male,Manager,['Machine Learning'],7,Master
+S054,姓名054,55,Female,Manager,"['Communication', 'Problem Solving']",13,Master
+S055,姓名055,39,Female,Developer,"['Data Analysis', 'Machine Learning']",10,Bachelor
+S056,姓名056,32,Male,Manager,['Leadership'],7,Bachelor
+S057,姓名057,38,Female,Developer,"['Programming', 'Machine Learning', 'Machine Learning', 'Machine Learning']",14,PhD
+S058,姓名058,47,Male,Researcher,['Problem Solving'],5,Master
+S059,姓名059,45,Male,Developer,"['Communication', 'Programming', 'Innovation', 'Machine Learning']",3,PhD
+S060,姓名060,40,Female,Developer,"['Problem Solving', 'Data Analysis']",11,Bachelor
+S061,姓名061,42,Male,Developer,"['Innovation', 'Machine Learning', 'Innovation']",11,Bachelor
+S062,姓名062,48,Male,Manager,['Project Management'],18,Bachelor
+S063,姓名063,50,Male,Manager,"['Project Management', 'Communication', 'Data Analysis', 'Leadership']",15,Bachelor
+S064,姓名064,49,Male,Developer,"['Problem Solving', 'Data Analysis', 'Machine Learning', 'Project Management']",12,Bachelor
+S065,姓名065,53,Female,Manager,"['Project Management', 'Programming', 'Project Management']",9,Bachelor
+S066,姓名066,39,Male,Team Leader,['Communication'],10,Bachelor
+S067,姓名067,25,Female,Team Leader,"['Problem Solving', 'Leadership', 'Machine Learning']",12,Master
+S068,姓名068,49,Male,Manager,['Leadership'],17,PhD
+S069,姓名069,31,Male,Manager,"['Project Management', 'Leadership']",6,Bachelor
+S070,姓名070,33,Male,Developer,"['Project Management', 'Innovation', 'Communication']",7,Master
+S071,姓名071,48,Male,Researcher,"['Innovation', 'Leadership']",14,Master
+S072,姓名072,25,Female,Manager,"['Programming', 'Programming', 'Leadership', 'Innovation']",13,PhD
+S073,姓名073,32,Female,Team Leader,['Problem Solving'],8,Bachelor
+S074,姓名074,48,Male,Developer,"['Problem Solving', 'Programming', 'Communication', 'Programming']",10,PhD
+S075,姓名075,35,Male,Manager,"['Data Analysis', 'Machine Learning', 'Project Management']",9,Bachelor
+S076,姓名076,41,Female,Team Leader,"['Data Analysis', 'Programming', 'Communication', 'Leadership']",18,Master
+S077,姓名077,32,Male,Team Leader,['Communication'],2,Master
+S078,姓名078,59,Male,Researcher,"['Programming', 'Problem Solving', 'Leadership', 'Communication']",5,Master
+S079,姓名079,59,Male,Developer,"['Communication', 'Machine Learning']",5,Master
+S080,姓名080,57,Female,Developer,['Machine Learning'],6,PhD
+S081,姓名081,29,Female,Researcher,"['Project Management', 'Project Management', 'Innovation', 'Programming']",19,Bachelor
+S082,姓名082,52,Female,Researcher,"['Machine Learning', 'Leadership', 'Communication']",8,Bachelor
+S083,姓名083,31,Male,Developer,"['Programming', 'Problem Solving']",16,PhD
+S084,姓名084,33,Male,Developer,"['Project Management', 'Communication']",13,Bachelor
+S085,姓名085,32,Female,Manager,['Machine Learning'],1,Master
+S086,姓名086,36,Female,Manager,"['Machine Learning', 'Problem Solving']",17,Bachelor
+S087,姓名087,58,Female,Researcher,"['Project Management', 'Data Analysis']",7,Master
+S088,姓名088,57,Female,Manager,"['Innovation', 'Leadership']",13,PhD
+S089,姓名089,47,Male,Team Leader,"['Programming', 'Programming', 'Machine Learning', 'Innovation']",4,Bachelor
+S090,姓名090,48,Female,Manager,"['Innovation', 'Problem Solving', 'Project Management', 'Leadership']",4,PhD
+S091,姓名091,59,Male,Manager,"['Innovation', 'Innovation', 'Data Analysis', 'Machine Learning']",6,Bachelor
+S092,姓名092,46,Female,Team Leader,"['Machine Learning', 'Project Management', 'Data Analysis', 'Machine Learning']",19,Master
+S093,姓名093,51,Male,Researcher,['Leadership'],12,PhD
+S094,姓名094,59,Female,Team Leader,['Data Analysis'],7,Bachelor
+S095,姓名095,25,Female,Manager,"['Programming', 'Machine Learning', 'Data Analysis']",10,Master
+S096,姓名096,59,Female,Researcher,['Leadership'],19,PhD
+S097,姓名097,38,Female,Manager,"['Project Management', 'Data Analysis', 'Machine Learning', 'Programming']",7,PhD
+S098,姓名098,27,Male,Team Leader,['Machine Learning'],3,Bachelor
+S099,姓名099,25,Female,Team Leader,"['Communication', 'Project Management', 'Programming']",13,Bachelor
+S100,姓名100,29,Male,Manager,"['Project Management', 'Data Analysis', 'Problem Solving']",13,Bachelor
